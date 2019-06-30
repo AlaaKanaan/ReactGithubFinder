@@ -5,9 +5,9 @@ class App extends Component {
 
     render() {
         return (
-            <div className="App">
-                <h1>Github Finder</h1>
-            </div>
+            <h1>
+                Hello
+            </h1>
         );
     }
 }
