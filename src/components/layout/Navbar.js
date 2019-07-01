@@ -13,15 +13,15 @@ export class Navbar extends Component {
         icon: PropTypes.string.isRequired
     };
 
+
     render() {
         return (
             <nav className="navbar navbar-dark bg-dark">
-                <a className="navbar-brand" href="#">
+                <a className="navbar-brand" href='/'>
                     <i className={this.props.icon}> </i>
                     <span className='text-react-color'>
                         {this.props.title}
                     </span>
-
                 </a>
             </nav>
         );
