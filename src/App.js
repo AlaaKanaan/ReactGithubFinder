@@ -6,7 +6,7 @@ class App extends Component {
 
     render() {
         return (
-            <Navbar title="Navbar"/>
+            <Navbar/>
         );
     }
 }
