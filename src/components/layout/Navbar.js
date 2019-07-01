@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 export class Navbar extends Component {
 
     static defaultProps = {
-        title: 'Github Finder',
-        icon: 'fab fa-github pr-1'
+        title: 'Github Finder ReactJs Demo',
+        icon: 'fab fa-2x fa-github d-inline-block align-middle text-react-color pr-2'
     };
 
     static propTypes = {
@@ -15,11 +15,14 @@ export class Navbar extends Component {
 
     render() {
         return (
-            <nav className='navbar bg-dark'>
-                <div className="brand text-white">
+            <nav className="navbar navbar-dark bg-dark">
+                <a className="navbar-brand" href="#">
                     <i className={this.props.icon}> </i>
-                    {this.props.title}
-                </div>
+                    <span className='text-react-color'>
+                        {this.props.title}
+                    </span>
+
+                </a>
             </nav>
         );
     }
