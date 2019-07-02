@@ -1,8 +1,7 @@
 import React from 'react';
 
-const UserItem = (props) => {
+const UserItem = ({user: {login, avatar_url, html_url}}) => {
 
-    const {login, avatar_url, html_url} = props.user;
     return (
         <div className="card m-2" style={{width: '12em'}}>
             <img className="card-img-top" src={avatar_url} alt={login}/>
