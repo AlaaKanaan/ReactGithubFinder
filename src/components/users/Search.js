@@ -9,7 +9,8 @@ class Search extends Component {
 
     static propTypes = {
         searchUsers: PropTypes.func.isRequired,
-        clearUsers: PropTypes.func.isRequired
+        clearUsers: PropTypes.func.isRequired,
+        showClear: PropTypes.bool.isRequired
     };
 
     onChange = (e) => this.setState({[e.target.name]: e.target.value});
@@ -32,7 +33,11 @@ class Search extends Component {
                                aria-label="Recipient's username" aria-describedby="basic-addon2"/>
                         <div className="input-group-append">
                             <button className="btn btn-primary" type="submit">Search</button>
-                            <button className="btn btn-danger" onClick={this.props.clearUsers} type="button">Clear</button>
+                            {this.props.showClear && (
+                                <button className="btn btn-danger" onClick={this.props.clearUsers}
+                                        type="button">Clear</button>
+                            )}
+
                         </div>
                     </div>
                 </form>
