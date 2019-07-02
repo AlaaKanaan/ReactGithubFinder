@@ -9,7 +9,7 @@ const UserItem = ({user: {login, avatar_url, html_url}}) => {
             <div className="card-body m-auto text-center">
                 <h5 className="card-title">{login}</h5>
                 <a href={html_url} target="_blank" rel="noopener noreferrer"
-                   className="card-link btn btn-primary">More</a>
+                   className="card-link btn btn-sm btn-primary">More</a>
             </div>
         </div>
     );
