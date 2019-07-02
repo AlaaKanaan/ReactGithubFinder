@@ -6,7 +6,7 @@ const Navbar = ({icon, title}) => {
         <nav className="navbar navbar-dark bg-dark">
             <a className="navbar-brand" href='/'>
                 <i className={icon}> </i>
-                <span className='text-react-color display-6'>
+                <span className='text-react-color small'>
                         {title}
                 </span>
             </a>
@@ -17,7 +17,7 @@ const Navbar = ({icon, title}) => {
 
 Navbar.defaultProps = {
     title: 'Github Finder ReactJs Demo',
-    icon: 'fab fa-2x fa-github d-inline-block align-middle text-react-color pr-2'
+    icon: 'fab fa-1x fa-github d-inline-block align-middle text-react-color pr-2'
 };
 
 Navbar.propTypes = {

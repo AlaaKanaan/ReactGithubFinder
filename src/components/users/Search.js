@@ -8,7 +8,8 @@ class Search extends Component {
     };
 
     static propTypes = {
-        searchUsers: PropTypes.func.isRequired
+        searchUsers: PropTypes.func.isRequired,
+        clearUsers: PropTypes.func.isRequired
     };
 
     onChange = (e) => this.setState({[e.target.name]: e.target.value});
@@ -21,7 +22,7 @@ class Search extends Component {
 
     render() {
         return (
-            <div className="form-group">
+            <div className="search-form">
                 <form onSubmit={this.onSubmit} className="form border-0">
                     <div className="input-group mb-3">
                         <input type="text" className="form-control" value={this.state.text}
@@ -31,6 +32,7 @@ class Search extends Component {
                                aria-label="Recipient's username" aria-describedby="basic-addon2"/>
                         <div className="input-group-append">
                             <button className="btn btn-primary" type="submit">Search</button>
+                            <button className="btn btn-danger" onClick={this.props.clearUsers} type="button">Clear</button>
                         </div>
                     </div>
                 </form>
