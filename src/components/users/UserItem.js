@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 
 const UserItem = ({user: {login, avatar_url, html_url}}) => {
-
     return (
         <div className="card m-2" style={{width: '12em'}}>
             <img className="card-img-top" src={avatar_url} alt={login}/>
