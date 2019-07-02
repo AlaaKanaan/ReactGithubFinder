@@ -11,7 +11,7 @@ class UserItem extends Component {
                 <div className="card-body m-auto text-center">
                     <h5 className="card-title">{login}</h5>
                     <a href={html_url} target="_blank" rel="noopener noreferrer"
-                       className="card-link btn btn-primary">Profile</a>
+                       className="card-link btn btn-primary">More</a>
                 </div>
             </div>
         );
