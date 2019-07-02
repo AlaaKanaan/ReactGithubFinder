@@ -22,6 +22,8 @@ class Search extends Component {
     };
 
     render() {
+
+        const {showClear, clearUsers} = this.props;
         return (
             <div className="search-form">
                 <form onSubmit={this.onSubmit} className="form border-0">
@@ -33,8 +35,8 @@ class Search extends Component {
                                aria-label="Recipient's username" aria-describedby="basic-addon2"/>
                         <div className="input-group-append">
                             <button className="btn btn-primary" type="submit">Search</button>
-                            {this.props.showClear && (
-                                <button className="btn btn-danger" onClick={this.props.clearUsers}
+                            {showClear && (
+                                <button className="btn btn-danger" onClick={clearUsers}
                                         type="button">Clear</button>
                             )}
 
