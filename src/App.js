@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
+import axios from 'axios';
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import './App.css';
 import Navbar from './components/layout/Navbar';
 import Users from './components/users/Users';
 import Search from './components/users/Search';
 import Alert from './components/layout/Alert';
-import axios from 'axios';
 
 class App extends Component {
 
@@ -50,18 +51,20 @@ class App extends Component {
     render() {
         const {users, loading, alert} = this.state;
         return (
-            <div>
-                <Navbar/>
-                <div className="container mt-4">
-                    <Alert alert={alert}/>
+            <Router>
+                <div className="App">
+                    <Navbar/>
+                    <div className="container mt-4">
+                        <Alert alert={alert}/>
 
-                    <Search searchUsers={this.searchUsers} clearUsers={this.clearUsers}
-                            showClear={(users.length > 0) ? true : false}
-                            setAlert={this.setAlert}
-                    />
-                    <Users loading={loading} users={users}/>
+                        <Search searchUsers={this.searchUsers} clearUsers={this.clearUsers}
+                                showClear={(users.length > 0) ? true : false}
+                                setAlert={this.setAlert}
+                        />
+                        <Users loading={loading} users={users}/>
+                    </div>
                 </div>
-            </div>
+            </Router>
         );
     }
 }
