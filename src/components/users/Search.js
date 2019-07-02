@@ -9,7 +9,8 @@ class Search extends Component {
     onChange = (e) => this.setState({[e.target.name]: e.target.value});
 
     onSubmit = (e) => {
-        console.log("submitted");
+        e.preventDefault();
+        console.log(this.state.text);
     };
 
     render() {
@@ -23,7 +24,7 @@ class Search extends Component {
                                placeholder="Search users..."
                                aria-label="Recipient's username" aria-describedby="basic-addon2"/>
                         <div className="input-group-append">
-                            <button className="btn btn-primary" type="button">Search</button>
+                            <button className="btn btn-primary" type="submit">Search</button>
                         </div>
                     </div>
                 </form>
