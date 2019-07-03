@@ -19,37 +19,11 @@ class User extends Component {
     render() {
         const {
             login,
-            id,
-            node_id,
             avatar_url,
-            gravatar_id,
-            url,
             html_url,
-            followers_url,
-            following_url,
-            gists_url,
-            starred_url,
-            subscriptions_url,
-            organizations_url,
-            repos_url,
-            events_url,
-            received_events_url,
-            type,
-            site_admin,
             name,
             bio,
-            company,
-            blog,
-            location,
-            email,
-            hireable,
-            bion,
-            public_repos,
-            public_gists,
-            followers,
-            following,
-            created_at,
-            updated_at
+            location
         } = this.props.user;
 
         const {loading} = this.props;
@@ -71,12 +45,14 @@ class User extends Component {
                             <img className="rounded-circle pr-3 mb-2" width='200' src={avatar_url} alt={login}/>
                             <h5>{name}</h5>
                             <p className='small'>{location}</p>
-                            <p className="card-text">
-                                {bio && <Fragment>
+
+                            {bio && <Fragment>
+                                <p className="card-text w-50 m-auto">
                                     {bio}
-                                </Fragment>}
-                            </p>
-                            <a href={html_url} target="_blank" className="btn btn-sm btn-dark">Github Profile</a>
+                                </p>
+                            </Fragment>}
+
+                            <a href={html_url} target="_blank" className="btn btn-sm btn-dark mt-3">Github Profile</a>
                         </div>
                     </div>
                 </div>

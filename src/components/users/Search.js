@@ -22,7 +22,6 @@ class Search extends Component {
             this.props.setAlert('Please enter search text', 'danger');
         } else {
             this.props.searchUsers(this.state.text);
-            this.setState({text: ''});
         }
     };
 
