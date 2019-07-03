@@ -15,7 +15,6 @@ const App = () => {
     const [alert, setAlert] = useState(null);
 
 
-
     // set alert
     const showAlert = (msg, type) => {
         setAlert({msg, type});
@@ -40,7 +39,7 @@ const App = () => {
                                 </Fragment>
                             )}/>
                             <Route exact path='/about' component={About}/>
-                            <Route exact path='/user/:login' compmnent={User}/>
+                            <Route exact path='/user/:login' component={User}/>
                         </Switch>
                     </div>
                 </div>
