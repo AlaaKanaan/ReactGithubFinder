@@ -9,9 +9,7 @@ const CardMovie = ({ mov }) => {
       //
             console.log("testing the cards with the itreator map")
       console.log("testing the cards with the itreator map")
-      console.log("testing the cards with the itreator map")
-
-      console.log("testing the cards with the itreator map")
+   // deleted tor itreable
         <div className="card">
           <img src={`https://image.tmdb.org/t/p/w500/` + mov.poster_path} className="card__image" alt="hu" />
           <div className="card__overlay">
