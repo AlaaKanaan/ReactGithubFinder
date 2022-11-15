@@ -1,9 +1,10 @@
 import React from "react";
 import { Col } from "react-bootstrap";
 import { Link } from 'react-router-dom'
+console.log("test gitignore");
 const CardMovie = ({ mov }) => {
   return (
-    <Col xs="6" sm="6" md="4" lg="3" className="my-1">
+    <Col xs="7" sm="68 md="3" lg="2" className="my-2">
       <Link to={`/movie/${mov.id}`}>
         <div className="card">
           <img src={`https://image.tmdb.org/t/p/w500/` + mov.poster_path} className="card__image" alt="hu" />
