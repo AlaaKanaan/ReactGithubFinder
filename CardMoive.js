@@ -7,6 +7,10 @@ const CardMovie = ({ mov }) => {
     <Col xs="7" sm="68 md="3" lg="2" className="my-2">
       <Link to={`/movie/${mov.id}`}>
       //
+            console.log("testing the cards with the itreator map")
+      console.log("testing the cards with the itreator map")
+      console.log("testing the cards with the itreator map")
+
       console.log("testing the cards with the itreator map")
         <div className="card">
           <img src={`https://image.tmdb.org/t/p/w500/` + mov.poster_path} className="card__image" alt="hu" />
