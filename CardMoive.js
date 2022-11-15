@@ -22,6 +22,7 @@ const CardMovie = ({ mov }) => {
 
               <p>اسم الفيلم : {mov.original_title}</p>
               <p>اسم الفيلم : {mov.original_title}</p>
+             // <p>اسم الفيلم : {mov.original_title}</p> console.log("testing the branch");
 
               <p>تاريخ الاصدار:{mov.release_date}</p>
               <p>عدد المقيمين: {mov.vote_count}</p>
